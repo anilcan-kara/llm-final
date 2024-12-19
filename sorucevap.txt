@@ -1,0 +1,298 @@
+S: Sınava girmek için gerekenler nelerdir?
+C: Öğrenci kimlik kartı veya geçerli bir öğrenci belgesi gereklidir.
+
+S: Sınavda cep telefonu hesap makinesi olarak kullanılabilir mi?
+C: Hayır, cep telefonu hesap makinesi olarak kullanılamaz.
+
+S: Sınavda akıllı saat getirilirse ne olur?
+C: Kopya teşebbüsü nedeniyle disiplin işlemi uygulanır.
+
+S: Sınav başladıktan sonra öğrenciler ne kadar süre salondan ayrılamaz?
+C: En az 15 dakika.
+
+S: Sınav süresince öğrencilerin konuşması serbest mi?
+C: Hayır, sınav süresince konuşmak yasaktır.
+
+S: Staj raporu hangi dilde yazılmalıdır?
+C: Yurtiçinde yapılan stajlar Türkçe, yurtdışında yapılan stajlar ise İngilizce yazılabilir.
+
+S: Staj raporunda kullanılacak yazı tipi ve boyutu nedir?
+C: Times New Roman, 12 punto.
+
+S: Staj raporunda kaynak belirtilmezse ne olur?
+C: Rapor kopya olarak değerlendirilir ve geçersiz sayılır.
+
+S: Staj raporu teslimi için süre ne kadardır?
+C: Staj bitiminden itibaren eğitim-öğretim döneminin ilk 30 günü içinde teslim edilmelidir.
+
+S: Raporun ciltleme kuralları nelerdir?
+C: Spiral cilt kullanılmalı, üst kapak şeffaf olmalıdır.
+
+S: Ders kaydı için şifre nasıl alınır?
+C: OBS sisteminden geçici şifre alınır ve giriş yapıldıktan sonra değiştirilir.
+
+S: Ders seçimi sırasında nelere dikkat edilmelidir?
+C: Ders gruplarına (A veya B) dikkat edilmelidir.
+
+S: İkinci öğretim öğrencileri ders kaydı yapmadan önce ne yapmalıdır?
+C: Harç ücretini ödemelidirler.
+
+S: Danışman onayı nasıl kontrol edilir?
+C: Ders seçme ekranına yeniden giriş yaparak kontrol edilebilir.
+
+S: Hangi öğrenciler öğrenim ücretini ödemek zorundadır?
+C: İkinci öğretim öğrencileri ve azami öğrenim süresini aşan öğrenciler.
+
+3.00 olmalı ve 3. yarıyıl ile 5. yarıyıl arasında başvuru yapılmalıdır.
+
+S: Çift anadal programında mezuniyet için gereken ortalama nedir?
+C: En az 2.50.
+
+S: Yandal başvuruları ne zaman yapılabilir?
+C: En erken 3. yarıyıl, en geç 6. yarıyıl başında.
+
+S: Çift anadal ve yandal programları aynı anda yapılabilir mi?
+C: Evet, mümkündür.
+
+S: Yandal programından başarıyla mezun olan öğrenci ne alır?
+C: Yandal sertifikası.
+
+S: Mezuniyet için toplam alınması gereken AKTS miktarı nedir?
+C: 240 AKTS.
+
+S: 7. ve 8. yarıyıl seçmeli ders toplamı ne olmalıdır?
+C: Toplam 10 farklı seçmeli ders olmalıdır.
+
+S: Aynı dersin transkriptte birden fazla görünmesi ne yapılmasını gerektirir?
+C: Fazla dersler silinmelidir.
+
+S: Stajların süresi ne kadardır?
+C: Her biri 25 gün olmalıdır.
+
+S: Mezuniyet için Genel Not Ortalaması ne kadar olmalıdır?
+C: 2.00 veya üzeri.
+
+S: Azami öğrenim süresi nedir?
+C: Lisans programlarında 7 yıl, ön lisans programlarında 4 yıldır.
+
+S: Azami süre sonunda başarısız ders sınırı nedir?
+C: En fazla 5 ders olmalıdır.
+
+S: Azami süre sonu sınavlarına kimler katılabilir?
+C: Azami süresini doldurmuş ve başvuru yapmış öğrenciler.
+
+S: Azami süresi dolmuş öğrenciler hangi haklardan yararlanamaz?
+C: Kayıt dondurma, yatay geçiş ve özel öğrenci haklarından.
+
+S: Azami süre sonunda yalnızca bir dersten başarısız olanlara hangi hak tanınır?
+C: Öğrencilik hakkı olmaksızın sınırsız sınav hakkı.
+
+S: Ek süre sınavlarında geçme notu kaçtır?
+C: 50.
+
+S: Ek süre hakkı nasıl belirlenir?
+C: Başarısız ders sayısını beş veya altına indirenlere 3 yarıyıl, sınavlara girmeden 4 yarıyıl.
+
+S: Azami süre kapsamında stajların durumu nedir?
+C: Staj yükümlülüğü yerine getirilmelidir, ek süre verilemez.
+
+S: AGNO başarı şartını sağlamayan öğrencilere ne yapılır?
+C: Başarısız derslerden sınav hakkı tanınır.
+
+S: Azami süre sonu sınavı hakkını kullanmayan öğrencilerin durumu nedir?
+C: Üniversite ile ilişikleri kesilir.
+
+S: Yatay geçiş başvuruları hangi dönemde yapılabilir?
+C: Belirtilen takvim süresinde yapılmalıdır.
+
+S: Yatay geçişte en düşük başarı şartı nedir?
+C: Genel not ortalamasının 100 üzerinden en az 60 olması.
+
+S: Yurt dışından yatay geçiş için hangi ek şartlar aranır?
+C: Yabancı dil yeterliliği ve başarı sıralaması şartı.
+
+S: Merkezi yerleştirme puanı ile yatay geçiş nasıl yapılır?
+C: Merkezi puan geçmek istenen programın taban puanına eşit veya yüksek olmalıdır.
+
+S: Çift anadal programında başarı sıralaması şartı nedir?
+C: %20 başarı sıralamasında olmak veya taban puana sahip olmak.
+
+S: Yandal programına başvuru şartları nelerdir?
+C: Anadal ortalaması 100 üzerinden en az 65 olmalıdır.
+
+S: Çift anadal programından mezuniyet şartı nedir?
+C: Anadal ortalamasının 100 üzerinden en az 70 olması.
+
+S: Çift anadal programından iki yarıyıl ders almayan öğrencinin durumu nedir?
+C: Programdan kaydı silinir.
+
+S: Yandal programından kaydı silinen bir öğrenci tekrar kayıt olabilir mi?
+C: Hayır, aynı programa tekrar kayıt yapılamaz.
+
+S: Yatay geçiş yapan öğrencilerin önceki dersleri nasıl değerlendirilir?
+C: Muafiyet değerlendirilir ve transkripte eklenir.
+
+S: Mezuniyet için transkriptte görünen fazla dersler ne yapılmalıdır?
+C: Fazla dersler silinmelidir.
+
+S: Seçmeli derslerin eşit olmaması durumunda ne yapılır?
+C: Fazla ders, eksik döneme aktarılmalıdır.
+
+S: Yanlış dönemde görünen dersler için ne yapılmalıdır?
+C: İlgili döneme taşınmalıdır.
+
+S: US kodlu ders yerine başka bir kodda ders alınırsa ne olur?
+C: US yerine sayılmaz, düzeltilmelidir.
+
+S: Staj bilgileri nasıl kontrol edilmelidir?
+C: 2 adet 25 günlük staj bilgisi transkriptte yer almalıdır.
+
+S: Sınavlarda kimlik kartı nerede tutulmalıdır?
+C: Sınav süresince masanın üzerinde olmalıdır.
+
+S: Cep telefonuyla sınava girilirse ne yapılır?
+C: Kopya teşebbüsü nedeniyle disiplin soruşturması başlatılır.
+
+S: Hesap makinesi kullanımı için özel kurallar var mı?
+C: Hesap makinelerinin kapakları/kılıfları çıkarılmış olmalıdır.
+
+S: Sınav başladıktan sonra en geç kaç dakika içinde gelenler sınava alınmaz?
+C: 15 dakika sonra gelenler sınava alınmaz.
+
+S: Sınav salonundaki masaların üzerindeki yazılardan kim sorumludur?
+C: O sırayı kullanan öğrenci sorumludur.
+
+S: Staj raporunda paragraf arası boşluk bırakılabilir mi?
+C: Hayır, paragraflar arasında boş satır olmamalıdır.
+
+S: Staj raporunda hangi yazı aralığı kullanılmalıdır?
+C: Metin 1.5 satır aralığı ile yazılmalıdır.
+
+S: Şekil ve tablolar nasıl açıklanmalıdır?
+C: Şekillerin açıklamaları altına, tabloların açıklamaları üstüne yazılmalıdır.
+
+S: Staj raporu kapak sayfası numaralandırılır mı?
+C: Hayır, kapak sayfasında sayfa numarası bulunmaz.
+
+S: Staj raporu içindekiler kısmında hangi yazı tipi ve boyutları kullanılmalıdır?
+C: Times New Roman, 16, 14, 12 ve 11 punto.
+
+S: Şifre oluşturma sırasında hangi bilgiler girilmelidir?
+C: Öğrenci kimlik bilgileri.
+
+S: Geçici şifre nasıl kalıcı hale getirilir?
+C: Giriş yapıldıktan sonra geçici şifre değiştirilerek.
+
+S: Ders seçimi onaylanmazsa ne yapılmalıdır?
+C: Danışman hocaya başvurulmalıdır.
+
+S: Ders seçim ekranına erişim için hangi koşullar sağlanmalıdır?
+C: Öğrenim ücreti ödenmiş olmalıdır.
+
+S: A ve B grupları nedir?
+C: Seçilecek derslerin hangi grupta olduğuna dikkat edilmelidir.
+
+S: Çift anadal programına kayıt için gereken minimum not ortalaması nedir?
+C: En az 3.00.
+
+S: Çift anadal için en erken başvuru dönemi nedir?
+C: 3. yarıyıl başı.
+
+S: Yandal programından mezuniyet için anadal ortalaması ne olmalıdır?
+C: En az 60 (100 üzerinden).
+
+S: Yandal programındaki dersler transkriptte nasıl gösterilir?
+C: Genel not ortalamasına dahil edilmeksizin belirtilir.
+
+S: Yandal programında başarısızlık durumunda ne olur?
+C: Yandal programından kaydı silinir.
+
+S: Seçmeli derslerin toplam AKTS’si neden önemlidir?
+C: Genel Not Ortalaması hesaplamasını etkiler.
+
+S: İngilizce derslerin intibakı nasıl yapılır?
+C: Ders isimlerinin eşdeğerliği kontrol edilmelidir.
+
+S: Aynı kodlu bir ders iki kere alınırsa ne olur?
+C: Mezuniyet gerçekleşmez.
+
+S: Ders taşıma işlemi ne zaman yapılır?
+C: Dersler yanlış dönemde göründüğünde.
+
+S: Yaz okulundan alınan dersler nasıl kontrol edilmelidir?
+C: Transkriptte uygun dönemde görünüp görünmediği kontrol edilmelidir.
+
+S: Ek süre sınavları hangi dersleri kapsar?
+C: Başarısız olunan veya hiç alınmamış dersler.
+
+S: Ek süre sonunda stajını tamamlamayan öğrencilerin durumu nedir?
+C: Üniversite ile ilişiği kesilir.
+
+S: AGNO’yu sağlayamayan öğrenciler hangi derslerden sınava girebilir?
+C: DD ve DC notu aldıkları derslerden.
+
+S: Azami süre sonu sınavlarına başvuru için katkı payı ödenir mi?
+C: Evet, öğrenim dönemi için katkı payı ödenmelidir.
+
+S: Azami süre sonunda tek dersten başarısız olanlar hangi hakka sahiptir?
+C: Sınırsız sınav hakkı.
+
+S: Açık öğretimden örgün öğretime geçişte şartlar nelerdir?
+C: Genel not ortalamasının en az 80 veya merkezi puanın yeterli olması.
+
+S: Yurtdışı yatay geçişte başarı sıralaması şartı nedir?
+C: Başarı sıralaması şartı aranan programlara uygunluk.
+
+S: Merkezi yerleştirme puanıyla yatay geçiş için intibak nasıl yapılır?
+C: Programın azami süresinden kabul edilen sınıf çıkarılarak hesaplanır.
+
+S: Yatay geçişlerde alınan dersler nasıl hesaplanır?
+C: Başarı notları transkripte işlenir ve ortalamaya dahil edilir.
+
+S: Özel öğrenci olarak alınan dersler nasıl transfer edilir?
+C: Sadece kayıtlı olunan diploma programına kabul edilen dersler transfer edilir.
+
+S: Raporun başlıkları nasıl düzenlenmelidir?
+C: Kesinlikle belirlenen başlıklar kullanılmalıdır.
+
+S: Proje ve yapılan iş bölümünde neler yer almalıdır?
+C: Tasarım, yazılım, test süreçleri detaylı açıklanmalıdır.
+
+S: Ekler bölümü rapora dahil edilmek zorunda mıdır?
+C: Hayır, isteğe bağlıdır.
+
+S: Rapor içindeki kodlar nereye eklenmelidir?
+C: Ekler bölümüne konulmalıdır.
+
+S: Şirket hakkında bilgi kısmında neler yer almalıdır?
+C: Şirketin ismi, adresi, faaliyet alanı, tarihçesi ve çalışan sayısı gibi bilgiler.
+
+S: Çift anadal programına birden fazla kayıt yapılabilir mi?
+C: Hayır, aynı anda yalnızca bir çift anadal yapılabilir.
+
+S: Üniversiteden uzaklaştırma cezaları azami sürede nasıl değerlendirilir?
+C: Ceza süreleri öğrenim süresinden sayılır.
+
+S: Ders seçiminde yapılacak hatalar nasıl düzeltilir?
+C: Danışman hocaya başvurularak.
+
+S: Staj raporlarında kullanılan kaynaklar nasıl belirtilmelidir?
+C: Kaynaklar açıkça belirtilmelidir.
+
+S: Azami süre kapsamında stajlar hangi dersler arasında değerlendirilir?
+C: Zorunlu stajlar da ders hesabına katılır.
+
+S: Öğrencilik hakkı olmadan sınava girme hakkı kimlere tanınır?
+C: Azami süresini doldurmuş ve yalnızca bir dersi kalanlara.
+
+S: Çift anadal programından mezuniyet için yandal ortalaması şart mı?
+C: Hayır, yalnızca anadal ortalaması gereklidir.
+
+S: Ders yükü fazlası olan öğrenciler için ne yapılır?
+C: Fazla dersler transkriptten çıkarılmalıdır.
+
+S: Ek süre sınavına başvurular ne zaman yapılır?
+C: Akademik takvimde belirtilen tarihlerde.
+
+S: Şifre oluşturma sırasında teknik sorun yaşanırsa ne yapılmalıdır?
+C: Öğrenci İşleri'ne başvurulmalıdır.
