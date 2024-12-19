@@ -296,3 +296,6 @@ C: Akademik takvimde belirtilen tarihlerde.
 
 S: Şifre oluşturma sırasında teknik sorun yaşanırsa ne yapılmalıdır?
 C: Öğrenci İşleri'ne başvurulmalıdır.
+
+S: Yurt dışındaki bir üniversiteden yatay geçiş yapan bir öğrenci hangi şartları sağlamalıdır?
+C: Yükseköğretim Kurulu tarafından tanınan bir üniversitede eğitim almış olması ve diploma programının eşdeğerliğinin kabul edilmesi gerekir​.
