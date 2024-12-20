@@ -1,101 +1,25 @@
-# !pip install ragatouille transformers datasets faiss-cpu PyPDF2 beautifulsoup4 requests torch huggingface_hub
-
-# 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
+# !pip install transformers evaluate faiss-cpu PyPDF2 beautifulsoup4 requests torch huggingface_hub
 
 import os
 
-import os
-import PyPDF2
+
+def get_cleaned_texts_from_folder(folder_path):
+    cleaned_texts = []
+    for filename in os.listdir(folder_path):
+        if filename.endswith(".txt"):
+            file_path = os.path.join(folder_path, filename)
+            with open(file_path, "r", encoding="utf-8") as file:
+                text = file.read().strip()
+                cleaned_texts.append(text)
+    return cleaned_texts
 
 
-def extract_text_from_pdf(pdf_path):
-    text = ""
-    with open(pdf_path, "rb") as file:
-        reader = PyPDF2.PdfReader(file)
-        for page_num in range(len(reader.pages)):
-            page = reader.pages[page_num]
-            text += page.extract_text() + "\n"
-    return text
+folder_path = "./veriseti/"
+cleaned_texts = get_cleaned_texts_from_folder(folder_path)
 
+print("Toplam metin sayısı:", len(cleaned_texts))
 
-pdf_dir = "./pdf/"
-pdf_texts = []
-
-for filename in os.listdir(pdf_dir):
-    if filename.endswith(".pdf"):
-        pdf_path = os.path.join(pdf_dir, filename)
-        text = extract_text_from_pdf(pdf_path)
-        pdf_texts.append(text)
-
-import requests
-from bs4 import BeautifulSoup
-
-
-def extract_text_from_url(url):
-    response = requests.get(url)
-    if response.status_code != 200:
-        print(f"Failed to retrieve {url}")
-        return ""
-    soup = BeautifulSoup(response.content, "html.parser")
-    paragraphs = soup.find_all("p")
-    text = "\n".join([para.get_text() for para in paragraphs])
-    return text
-
-
-urls = [
-    "https://ogrenciisleri.duzce.edu.tr/sayfa/b149/mevzuat",
-    "https://haber.duzce.edu.tr/duyurular",
-    "https://www.duzce.edu.tr/sayfa/2bd9/akademik-takvim",
-    "https://ebs.duzce.edu.tr/tr-TR/GenelBilgi/Index/12",
-    "https://ebs.duzce.edu.tr/tr-TR/GenelBilgi/Index/27",
-    "https://ebs.duzce.edu.tr/tr-TR/GenelBilgi/Index/36",
-    "https://ebs.duzce.edu.tr/tr-TR/Bolum/Index/14?bot=14",
-    "https://bm.mf.duzce.edu.tr/personel/akademik",
-    "https://www.bozok.edu.tr/mevzuat",
-    "https://bozok.edu.tr/",
-    "https://bozok.edu.tr/ogrenci",
-    "https://bozok.edu.tr/sayfa/genel-kayit-ve-kabul-kosullari/9253",
-    "https://bozok.edu.tr/sayfa/kredi-hareketliligi-ve-onceki-ogrenmenin-taninmasi/9254",
-    "https://bozok.edu.tr/sayfa/yurtdisi-ogreniminin-taninmasi/9255",
-    "https://bozok.edu.tr/sayfa/akts-kredilerinin-belirlenmesi/9256",
-    "https://bozok.edu.tr/sayfa/akademik-danismanlik/9257",
-    "https://bozok.edu.tr/diplomaeki",
-    "https://bozok.edu.tr/duyurular/ogrenci",
-]
-
-web_texts = []
-
-for url in urls:
-    text = extract_text_from_url(url)
-    web_texts.append(text)
-
-import re
-
-
-def clean_text(text):
-    text = re.sub(r"\s+", " ", text)
-    text = re.sub(r"[^A-Za-z0-9.,;:!?İĞÜŞÇÖığüşçö ]+", "", text)
-    return text.strip()
-
-
-def split_into_chunks(text, chunk_size=1000):
-    chunks = []
-    for i in range(0, len(text), chunk_size):
-        chunks.append(text[i : i + chunk_size])
-    return chunks
-
-
-cleaned_texts = [clean_text(text) for text in pdf_texts + web_texts]
-chunks = []
-
-for text in cleaned_texts:
-    chunks.extend(split_into_chunks(text))
-
-with open("dataset.txt", "w", encoding="utf-8") as f:
-    for chunk in chunks:
-        f.write(chunk + "\n")
-
-file_path = "/content/drive/MyDrive/sorucevap.txt"
+file_path = "./sorucevap.txt"
 
 
 def parse_questions_and_answers(file_path):
@@ -117,6 +41,11 @@ questions, answers = parse_questions_and_answers(file_path)
 print("Sorular:", questions[:3])
 print("Cevaplar:", answers[:3])
 
+hf_token = "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"
+from huggingface_hub import login
+
+login(token=hf_token)
+
 import transformers
 import torch
 
@@ -129,10 +58,16 @@ pipeline = transformers.pipeline(
     device_map="auto",
 )
 
+print(pipeline.model.config)
+
 messages = [
     {
         "role": "system",
         "content": "Sen öğrenci işleri departmanı yerine soruları cevaplayan bir yapay zeka asistanısın. Cevapların kısa, doğru ve profesyonel olmalıdır.",
+    },
+    {
+        "role": "system",
+        "content": "Soruları kısa ve net bir şekilde, yalnızca istenen bilgiyi içerecek şekilde cevapla. Gereksiz detay verme.",
     },
     {"role": "user", "content": "Soru: Mezuniyet koşulları nelerdir?"},
     {
@@ -168,73 +103,120 @@ messages = [
     },
 ]
 
-for idx, text in enumerate(cleaned_texts[:10]):
-    question = f"Soru {idx+1}: Bu metindeki önemli bilgi nedir?"
-    answer = f"Cevap {idx+1}: {text[:200]}"
-    messages.append({"role": "user", "content": question})
-    messages.append({"role": "assistant", "content": answer})
+print("Template message sayisi:", len(messages))
+
+generated_questions = []
 
 terminators = [
     pipeline.tokenizer.eos_token_id,
     pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>"),
 ]
 
-outputs = pipeline(
-    messages,
-    max_new_tokens=256,
-    eos_token_id=terminators,
-    do_sample=True,
-    temperature=0.6,
-    top_p=0.9,
-)
+for idx, text in enumerate(cleaned_texts):
+    print(f"Soru uretiliyor {idx + 1} / {len(cleaned_texts)}")
+    question = f"Bu metin hakkında öğrenciler tarafından öğrenci işleri departmanına yöneltilebilecek bir adet soru sor: ```{text[:1000]}```"
+    messages_copy = messages.copy()
+    messages_copy.append({"role": "user", "content": question})
 
-for output in outputs:
-    print(output["generated_text"])
+    outputs = pipeline(
+        messages_copy,
+        max_new_tokens=16,
+        eos_token_id=terminators,
+        do_sample=True,
+        temperature=0.1,
+        top_p=0.9,
+    )
 
-from datasets import load_metric
+    generated_questions.append(outputs[-1]["generated_text"][1]["content"])
+
+print("Üretilen soru sayisi:", len(generated_questions))
+
+with open("./generated_questions.txt", "w", encoding="utf-8") as f:
+    for question in generated_questions:
+        f.write(question + "\n")
+
+generated_answers = []
+
+for idx, generated_question in enumerate(generated_questions):
+    print(f"Cevap uretiliyor {idx + 1} / {len(generated_questions)}")
+    messages_copy = messages.copy()
+    messages_copy.append({"role": "user", "content": generated_question})
+
+    outputs = pipeline(
+        messages_copy,
+        max_new_tokens=16,
+        eos_token_id=terminators,
+        do_sample=True,
+        temperature=0.1,
+        top_p=0.9,
+    )
+
+    generated_answers.append(outputs[-1]["generated_text"][1]["content"])
+
+print("Üretilen cevap sayisi:", len(generated_answers))
+
+from evaluate import load
 import string
 import re
 
-metric_em = load_metric("exact_match")
-metric_f1 = load_metric("f1")
+metric_em = load("exact_match")
+metric_f1 = load("f1")
 
 
 def normalize_answer(s):
-    """Normalize metinleri karşılaştırma için hazırlar."""
-
-    def remove_punctuation(text):
-        return "".join(ch for ch in text if ch not in string.punctuation)
-
-    def lower(text):
-        return text.lower()
-
-    def remove_articles(text):
-        return re.sub(r"\b(a|an|the)\b", " ", text)
-
-    return remove_punctuation(lower(remove_articles(s))).strip()
+    return s
 
 
-def compute_metrics(predictions, references):
+def compute_metrics_single(prediction, reference):
+    pred_norm = normalize_answer(prediction)
+    ref_norm = normalize_answer(reference)
+
+    em = int(pred_norm == ref_norm)
+
+    pred_tokens = set(pred_norm.split())
+    ref_tokens = set(ref_norm.split())
+    common = pred_tokens & ref_tokens
+
+    precision = len(common) / len(pred_tokens) if pred_tokens else 0
+    recall = len(common) / len(ref_tokens) if ref_tokens else 0
+    f1 = (2 * precision * recall) / (precision + recall) if (precision + recall) else 0
+
+    return em, f1
+
+
+def evaluate_model(questions, real_answers):
     em_scores = []
     f1_scores = []
+    i = 1
 
-    for pred, ref in zip(predictions, references):
-        pred_norm = normalize_answer(pred)
-        ref_norm = normalize_answer(ref)
+    for question, real_answer in zip(questions, real_answers):
+        print("Metrik hesaplanıyor:", i, "/", len(questions))
+        i += 1
+        print("Soru:", question)
+        print("Gerçek Cevap:", real_answer)
 
-        em_scores.append(int(pred_norm == ref_norm))
+        messages_copy = messages.copy()
 
-        pred_tokens = set(pred_norm.split())
-        ref_tokens = set(ref_norm.split())
-        common = pred_tokens & ref_tokens
+        for idx, generated_question in enumerate(generated_questions):
+            generated_answer = generated_answers[idx]
+            messages_copy.append({"role": "user", "content": generated_question})
+            messages_copy.append({"role": "assistant", "content": generated_answer})
 
-        precision = len(common) / len(pred_tokens) if pred_tokens else 0
-        recall = len(common) / len(ref_tokens) if ref_tokens else 0
-        f1 = (
-            (2 * precision * recall) / (precision + recall)
-            if (precision + recall)
-            else 0
+        messages_copy.append({"role": "user", "content": question})
+
+        model_output = pipeline(
+            messages_copy,
+            max_new_tokens=16,
+            eos_token_id=terminators,
+            do_sample=True,
+            temperature=0.1,
+            top_p=0.9,
         )
+
+        model_answer = model_output[0]["generated_text"][1]["content"]
+
+        em, f1 = compute_metrics_single(model_answer, real_answer)
+        em_scores.append(em)
         f1_scores.append(f1)
 
     return {
@@ -243,13 +225,7 @@ def compute_metrics(predictions, references):
     }
 
 
-real_answers = answers
-model_predictions = [
-    "Öğrenci kimlik kartı gereklidir.",
-    "Hayır, cep telefonu hesap makinesi olarak kullanılamaz.",
-    "Kopya teşebbüsü nedeniyle disiplin işlemi uygulanır.",
-]
+metrics = evaluate_model(questions[:2], answers[:2])
 
-metrics = compute_metrics(model_predictions, real_answers)
 print("Exact Match (EM):", metrics["exact_match"])
 print("F1 Score:", metrics["f1"])
