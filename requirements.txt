@@ -1,0 +1,11 @@
+torch
+torchvision
+torchaudio
+transformers
+datasets
+faiss-cpu
+PyPDF2
+beautifulsoup4
+requests
+huggingface_hub
+ragatouille
